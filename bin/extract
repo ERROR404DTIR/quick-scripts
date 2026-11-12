@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# Usage: extract FILE...  - unpack almost any archive
+[ -n "$1" ] || { echo "usage: extract FILE..." >&2; exit 1; }
+for f in "$@"; do
+  case "$f" in
+    *.tar.gz|*.tgz) tar xzf "$f" ;;
+    *.tar.bz2|*.tbz2) tar xjf "$f" ;;
+    *.tar.xz) tar xJf "$f" ;;
+    *.tar) tar xf "$f" ;;
+    *.zip) unzip "$f" ;;
+    *.gz) gunzip "$f" ;;
+    *.bz2) bunzip2 "$f" ;;
+    *.7z) 7z x "$f" ;;
+    *.rar) unrar x "$f" ;;
+    *) echo "unsupported: $f" >&2 ;;
+  esac
+done
