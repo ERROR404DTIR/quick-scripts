@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Usage: backup FILE_OR_DIR...  - copy with a timestamp suffix
+[ -n "$1" ] || { echo "usage: backup FILE_OR_DIR..." >&2; exit 1; }
+for f in "$@"; do
+  dst="$f.bak-$(date +%Y%m%d-%H%M%S)"
+  cp -a "$f" "$dst" && echo "$dst"
+done
