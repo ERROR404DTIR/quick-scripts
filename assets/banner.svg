@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" role="img" aria-label="quick scripts">
+<style>
+.bg{fill:#0d1117}
+.t{font:700 38px monospace;fill:#e6edf3}
+.l{font:18px monospace;fill:#3fb950;opacity:0;animation:show 6s infinite}
+.l2{animation-delay:.8s}.l3{animation-delay:1.6s}
+.p{fill:#58a6ff}
+.cur{fill:#3fb950;animation:blink 1s steps(2) infinite}
+@keyframes show{0%{opacity:0;transform:translateX(-10px)}10%,85%{opacity:1;transform:translateX(0)}100%{opacity:0}}
+@keyframes blink{50%{opacity:0}}
+</style>
+<rect class="bg" width="800" height="200" rx="14"/>
+<circle cx="30" cy="28" r="6" fill="#f85149"/><circle cx="52" cy="28" r="6" fill="#d29922"/><circle cx="74" cy="28" r="6" fill="#3fb950"/>
+<text class="t" x="60" y="95">quick-scripts</text>
+<text class="l" x="60" y="130"><tspan class="p">$</tspan> killport 3000</text>
+<text class="l l2" x="60" y="155"><tspan class="p">$</tspan> serve 8080</text>
+<text class="l l3" x="60" y="180"><tspan class="p">$</tspan> backup notes.md</text>
+<rect class="cur" x="330" y="165" width="10" height="18"/>
+</svg>
