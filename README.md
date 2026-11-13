@@ -1,4 +1,6 @@
 <p align="center">
+
+<p align="center"><img src="assets/readme-banner.svg" alt="Animated Quick Scripts banner" width="100%"></p>
   <img src="assets/banner.svg" alt="quick-scripts" width="100%">
 </p>
 
